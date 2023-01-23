@@ -10,7 +10,6 @@ import UIKit
 final class MainTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .systemTeal
     setUpTabBarAppearance()
     setUpViewControllers()
     setUpSelectedAnimation(at: tabBar.items![0])
@@ -26,11 +25,12 @@ final class MainTabBarController: UITabBarController {
   }
   
   private func setUpTabBarStyle() {
-    tabBar.frame.size.height = 100
-    tabBar.frame.origin.y = view.frame.size.height - 100
+    tabBar.frame.size.height = UIScreen.main.bounds.size.height * 0.125
+    tabBar.frame.origin.y = view.frame.size.height - (tabBar.frame.size.height)
+    
     tabBar.layer.cornerRadius = 40
     tabBar.clipsToBounds = true
-    tabBar.tintColor = UIColor(named: "SecondaryColor")
+    tabBar.tintColor = AppColors.secondaryColor
     tabBar.layer.maskedCorners = [
       .layerMaxXMinYCorner,
       .layerMinXMinYCorner
@@ -38,10 +38,10 @@ final class MainTabBarController: UITabBarController {
   }
   
   private func setUpSelectedAnimation(at item: UITabBarItem) {
-    tabBar.items?.forEach({ tabItem in
+    tabBar.items?.forEach { tabItem in
       guard let barItemView = tabItem.value(forKey: "view") as? UIView else { return }
       barItemView.transform = .identity
-    })
+    }
     
     guard let barItemView = item.value(forKey: "view") as? UIView else { return }
     let timeInterval: TimeInterval = 0.4
