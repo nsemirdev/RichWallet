@@ -14,6 +14,9 @@
 		2DEF375F297EC4A000C378FE /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF375E297EC4A000C378FE /* AppContainer.swift */; };
 		2DEF3761297EC4A500C378FE /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF3760297EC4A500C378FE /* AppRouter.swift */; };
 		2DEF3768297EC5D700C378FE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF3767297EC5D700C378FE /* MainTabBarController.swift */; };
+		2DEF376A297EC63700C378FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF3769297EC63700C378FE /* HomeViewController.swift */; };
+		2DEF376C297EC63E00C378FE /* TradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF376B297EC63E00C378FE /* TradeViewController.swift */; };
+		2DEF376E297EC64500C378FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF376D297EC64500C378FE /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		2DEF375E297EC4A000C378FE /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		2DEF3760297EC4A500C378FE /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		2DEF3767297EC5D700C378FE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2DEF3769297EC63700C378FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2DEF376B297EC63E00C378FE /* TradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
+		2DEF376D297EC64500C378FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		2DEF3763297EC53600C378FE /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				2DEF3769297EC63700C378FE /* HomeViewController.swift */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 		2DEF3764297EC53D00C378FE /* TradeScene */ = {
 			isa = PBXGroup;
 			children = (
+				2DEF376B297EC63E00C378FE /* TradeViewController.swift */,
 			);
 			path = TradeScene;
 			sourceTree = "<group>";
@@ -104,6 +112,7 @@
 		2DEF3765297EC54300C378FE /* ProfileScene */ = {
 			isa = PBXGroup;
 			children = (
+				2DEF376D297EC64500C378FE /* ProfileViewController.swift */,
 			);
 			path = ProfileScene;
 			sourceTree = "<group>";
@@ -188,11 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DEF376C297EC63E00C378FE /* TradeViewController.swift in Sources */,
 				2DEF375F297EC4A000C378FE /* AppContainer.swift in Sources */,
 				2DEF3768297EC5D700C378FE /* MainTabBarController.swift in Sources */,
 				2DEF374A297EC34200C378FE /* AppDelegate.swift in Sources */,
 				2DEF3761297EC4A500C378FE /* AppRouter.swift in Sources */,
 				2DEF374C297EC34200C378FE /* SceneDelegate.swift in Sources */,
+				2DEF376E297EC64500C378FE /* ProfileViewController.swift in Sources */,
+				2DEF376A297EC63700C378FE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
