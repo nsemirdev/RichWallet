@@ -25,7 +25,7 @@ final class MainTabBarController: UITabBarController {
   }
   
   private func setUpTabBarStyle() {
-    tabBar.frame.size.height = UIScreen.main.bounds.size.height * 0.125
+    tabBar.frame.size.height = UIScreen.main.bounds.size.height * 0.1 + (view.safeAreaInsets.bottom * 0.3)
     tabBar.frame.origin.y = view.frame.size.height - (tabBar.frame.size.height)
     
     tabBar.layer.cornerRadius = 40

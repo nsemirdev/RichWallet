@@ -19,7 +19,19 @@ final class HomeViewController: UIViewController {
     return label
   }()
   
-  let activityIndicator = UIActivityIndicatorView()
+  private let addAssetButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.layer.cornerRadius = 8
+    button.setTitleColor(AppColors.secondaryColor, for: .normal)
+    button.setTitle("Add Funds", for: .normal)
+    button.layer.shadowOffset = .init(width: -3, height: 3)
+    button.layer.shadowColor = AppColors.primaryColor?.cgColor
+    button.backgroundColor = AppColors.primaryColor
+    button.layer.shadowOpacity = 0.7
+    return button
+  }()
+  
+  private let activityIndicator = UIActivityIndicatorView()
 
   let viewModel = HomeViewModel()
   
@@ -29,7 +41,7 @@ final class HomeViewController: UIViewController {
     layout()
     setUpInteractions()
     // API CALL HERE OR READ FROM DATABASE
-    setAttributedTextForTotalAssets("2,147.58", for: .dollar)
+    setAttributedTextForTotalAssets("0,00.00", for: .dollar)
   }
   
   var initial: CGFloat = 0
@@ -68,6 +80,15 @@ final class HomeViewController: UIViewController {
     
     activityIndicator.frame = .init(x: view.center.x - 40, y: 20, width: 80, height: 80)
     activityIndicator.style = .medium
+    
+    view.addSubview(addAssetButton)
+  
+    addAssetButton.snp.makeConstraints { make in
+      make.leading.equalToSuperview().offset(40)
+      make.trailing.equalToSuperview().offset(-40)
+      make.height.equalTo(44)
+      make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-24)
+    }
   }
   
   private func setUpInteractions() {
