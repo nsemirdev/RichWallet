@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		2DEF374A297EC34200C378FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF3749297EC34200C378FE /* AppDelegate.swift */; };
 		2DEF374C297EC34200C378FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF374B297EC34200C378FE /* SceneDelegate.swift */; };
-		2DEF374E297EC34200C378FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF374D297EC34200C378FE /* ViewController.swift */; };
 		2DEF3753297EC34300C378FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF3752297EC34300C378FE /* Assets.xcassets */; };
 		2DEF3756297EC34300C378FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF3754297EC34300C378FE /* LaunchScreen.storyboard */; };
+		2DEF375F297EC4A000C378FE /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF375E297EC4A000C378FE /* AppContainer.swift */; };
+		2DEF3761297EC4A500C378FE /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF3760297EC4A500C378FE /* AppRouter.swift */; };
+		2DEF3768297EC5D700C378FE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF3767297EC5D700C378FE /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2DEF3746297EC34100C378FE /* RichWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF3749297EC34200C378FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DEF374B297EC34200C378FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2DEF374D297EC34200C378FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DEF3752297EC34300C378FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DEF3755297EC34300C378FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DEF3757297EC34300C378FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DEF375E297EC4A000C378FE /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		2DEF3760297EC4A500C378FE /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		2DEF3767297EC5D700C378FE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,64 @@
 		2DEF3748297EC34100C378FE /* RichWallet */ = {
 			isa = PBXGroup;
 			children = (
+				2DEF375D297EC48700C378FE /* App */,
+				2DEF3766297EC54E00C378FE /* Resources */,
+				2DEF3762297EC52F00C378FE /* Scenes */,
+			);
+			path = RichWallet;
+			sourceTree = "<group>";
+		};
+		2DEF375D297EC48700C378FE /* App */ = {
+			isa = PBXGroup;
+			children = (
 				2DEF3749297EC34200C378FE /* AppDelegate.swift */,
 				2DEF374B297EC34200C378FE /* SceneDelegate.swift */,
-				2DEF374D297EC34200C378FE /* ViewController.swift */,
+				2DEF375E297EC4A000C378FE /* AppContainer.swift */,
+				2DEF3760297EC4A500C378FE /* AppRouter.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2DEF3762297EC52F00C378FE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2DEF3765297EC54300C378FE /* ProfileScene */,
+				2DEF3764297EC53D00C378FE /* TradeScene */,
+				2DEF3763297EC53600C378FE /* HomeScene */,
+				2DEF3767297EC5D700C378FE /* MainTabBarController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2DEF3763297EC53600C378FE /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		2DEF3764297EC53D00C378FE /* TradeScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TradeScene;
+			sourceTree = "<group>";
+		};
+		2DEF3765297EC54300C378FE /* ProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileScene;
+			sourceTree = "<group>";
+		};
+		2DEF3766297EC54E00C378FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				2DEF3752297EC34300C378FE /* Assets.xcassets */,
 				2DEF3754297EC34300C378FE /* LaunchScreen.storyboard */,
 				2DEF3757297EC34300C378FE /* Info.plist */,
 			);
-			path = RichWallet;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DEF374E297EC34200C378FE /* ViewController.swift in Sources */,
+				2DEF375F297EC4A000C378FE /* AppContainer.swift in Sources */,
+				2DEF3768297EC5D700C378FE /* MainTabBarController.swift in Sources */,
 				2DEF374A297EC34200C378FE /* AppDelegate.swift in Sources */,
+				2DEF3761297EC4A500C378FE /* AppRouter.swift in Sources */,
 				2DEF374C297EC34200C378FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HG8VJQPKXZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RichWallet/Info.plist;
+				INFOPLIST_FILE = RichWallet/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -307,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HG8VJQPKXZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RichWallet/Info.plist;
+				INFOPLIST_FILE = RichWallet/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
