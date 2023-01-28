@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D90F7542985B9B8003286E3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90F7532985B9B8003286E3 /* CardView.swift */; };
+		2D90F7572985BECA003286E3 /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90F7562985BECA003286E3 /* UIScrollView+.swift */; };
 		2DEF374A297EC34200C378FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF3749297EC34200C378FE /* AppDelegate.swift */; };
 		2DEF374C297EC34200C378FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF374B297EC34200C378FE /* SceneDelegate.swift */; };
 		2DEF3753297EC34300C378FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF3752297EC34300C378FE /* Assets.xcassets */; };
@@ -19,10 +21,11 @@
 		2DEF376E297EC64500C378FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF376D297EC64500C378FE /* ProfileViewController.swift */; };
 		2DFE5E15297ECDDC00698BED /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2DFE5E14297ECDDC00698BED /* SnapKit */; };
 		2DFE5E18297F051400698BED /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE5E17297F051400698BED /* AppColors.swift */; };
-		2DFE5E1A297F067E00698BED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFE5E19297F067E00698BED /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D90F7532985B9B8003286E3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2D90F7562985BECA003286E3 /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		2DEF3746297EC34100C378FE /* RichWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF3749297EC34200C378FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DEF374B297EC34200C378FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		2DEF376B297EC63E00C378FE /* TradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
 		2DEF376D297EC64500C378FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2DFE5E17297F051400698BED /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
-		2DFE5E19297F067E00698BED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D90F7552985BEBC003286E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D90F7562985BECA003286E3 /* UIScrollView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2DEF373D297EC34100C378FE = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 		2DEF3748297EC34100C378FE /* RichWallet */ = {
 			isa = PBXGroup;
 			children = (
+				2D90F7552985BEBC003286E3 /* Extensions */,
 				2DFE5E16297F050C00698BED /* Colors */,
 				2DEF375D297EC48700C378FE /* App */,
 				2DEF3766297EC54E00C378FE /* Resources */,
@@ -104,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2DEF3769297EC63700C378FE /* HomeViewController.swift */,
-				2DFE5E19297F067E00698BED /* HomeViewModel.swift */,
+				2D90F7532985B9B8003286E3 /* CardView.swift */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -222,8 +233,9 @@
 				2DEF376C297EC63E00C378FE /* TradeViewController.swift in Sources */,
 				2DFE5E18297F051400698BED /* AppColors.swift in Sources */,
 				2DEF375F297EC4A000C378FE /* AppContainer.swift in Sources */,
-				2DFE5E1A297F067E00698BED /* HomeViewModel.swift in Sources */,
 				2DEF3768297EC5D700C378FE /* MainTabBarController.swift in Sources */,
+				2D90F7572985BECA003286E3 /* UIScrollView+.swift in Sources */,
+				2D90F7542985B9B8003286E3 /* CardView.swift in Sources */,
 				2DEF374A297EC34200C378FE /* AppDelegate.swift in Sources */,
 				2DEF3761297EC4A500C378FE /* AppRouter.swift in Sources */,
 				2DEF374C297EC34200C378FE /* SceneDelegate.swift in Sources */,

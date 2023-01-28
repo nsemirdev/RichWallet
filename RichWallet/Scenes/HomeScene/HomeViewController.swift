@@ -32,19 +32,39 @@ final class HomeViewController: UIViewController {
   }()
   
   private let activityIndicator = UIActivityIndicatorView()
-
-  let viewModel = HomeViewModel()
+  
+  private let scrollView: UIScrollView = {
+    let scrollView = UIScrollView()
+    scrollView.layer.cornerRadius = 12
+    scrollView.showsVerticalScrollIndicator = false
+    scrollView.layer.borderColor = AppColors.ternaryColor?.cgColor
+    scrollView.layer.borderWidth = 3
+    return scrollView
+  }()
+    
+  private let stackView: UIStackView = {
+    let stackView = UIStackView()
+    stackView.axis = .vertical
+    stackView.spacing = 8
+    stackView.distribution = .fillEqually
+    stackView.alignment = .center
+    return stackView
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = AppColors.secondaryColor
     layout()
     setUpInteractions()
-    // API CALL HERE OR READ FROM DATABASE
     setAttributedTextForTotalAssets("0,00.00", for: .dollar)
   }
   
-  var initial: CGFloat = 0
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    scrollView.updateContentView()
+  }
+  
+  private var initial: CGFloat = 0
   
   @objc func handlePan(_ gesture: UIPanGestureRecognizer) {
     if gesture.state == .began {
@@ -89,8 +109,30 @@ final class HomeViewController: UIViewController {
       make.height.equalTo(44)
       make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-24)
     }
+    
+    view.addSubview(scrollView)
+    
+    scrollView.snp.makeConstraints { make in
+      make.top.equalTo(totalAssetsLabel.snp.bottom).offset(32)
+      make.leading.equalToSuperview().offset(16)
+      make.trailing.equalToSuperview().offset(-16)
+      make.bottom.equalTo(addAssetButton.snp.top).offset(-32)
+    }
+    
+    scrollView.addSubview(stackView)
+    
+    stackView.snp.makeConstraints { make in
+      make.leading.top.equalToSuperview().offset(8)
+      make.trailing.equalToSuperview().offset(-8)
+    }
+    
+    stackView.addArrangedSubview(CardView())
+    stackView.addArrangedSubview(CardView())
+//    stackView.addArrangedSubview(CardView())
+//    stackView.addArrangedSubview(CardView())
+//    stackView.addArrangedSubview(CardView())
   }
-  
+    
   private func setUpInteractions() {
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(scaleLabel))
     totalAssetsLabel.addGestureRecognizer(tapGesture)
@@ -113,7 +155,6 @@ final class HomeViewController: UIViewController {
   }
   
   @objc func handleLongTap(_ gesture: UILongPressGestureRecognizer) {
-    // How can i move to view model. Or should i do?
     if gesture.state == .began {
       scaleUpLabelWithBitcoinSign()
     } else if gesture.state == .ended {
